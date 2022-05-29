@@ -27,7 +27,7 @@ function createGalleryMarkup(items) {
 
 let modal
 function onOpenModal(event) {
-    if (!event.target.classList.contains('gallery__image')) {
+    if (event.target.nodeName !== 'IMG') {
         return;
     }
     event.preventDefault();
